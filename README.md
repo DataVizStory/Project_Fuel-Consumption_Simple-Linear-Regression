@@ -96,7 +96,7 @@ Insights:
 Preliminary analysis indicates a negative correlation between horsepower and fuel economy, suggesting that higher horsepower generally leads to lower MPG.
 
 ### 2) Create Testing and Training Dataset
-Split the dataset into training (80%) and testing (20%) subsets to facilitate model training and evaluation.
+Split the dataset into training (75%) and testing (25%) subsets to facilitate model training and evaluation.
 
 ```python
 X = df['Horse Power']  # Input to the Model
