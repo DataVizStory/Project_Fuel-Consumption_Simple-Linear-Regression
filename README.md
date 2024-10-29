@@ -92,6 +92,7 @@ plt.grid()
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/Chart3.png)
+
 Insights:
 Preliminary analysis indicates a negative correlation between horsepower and fuel economy, suggesting that higher horsepower generally leads to lower MPG.
 
