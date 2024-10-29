@@ -1,5 +1,7 @@
 # Predicting Fuel Economy Using Simple Linear Regression
-> Simple Liner Regression
+**Author:** Iaroslava Mizai  
+>**Project created as a final project for the course:** Simple Linear Regression for the Absolute Beginner  
+>**Instructor:** Ryan Ahmed 
 
 ## Project Overview
 This project aims to develop a predictive model that analyzes the relationship between Vehicle Horse Power (HP) and Fuel Economy, measured in Miles Per Gallon (MPG). By leveraging data from a comprehensive Fuel Economy dataset, we seek to understand how variations in horsepower can impact fuel efficiency, which is crucial for automotive manufacturers aiming to optimize vehicle performance and environmental impact.
