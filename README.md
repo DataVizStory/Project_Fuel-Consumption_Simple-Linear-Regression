@@ -160,7 +160,7 @@ accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
 print('Model Accuracy:', accuracy_LinearRegression)
 ```
 Insights:
-The model achieved an accuracy of approximately 93.4%, suggesting it is effective in predicting fuel economy based on horsepower.
+The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
 
 ```python
 # Visualize Test Set Results
@@ -179,7 +179,7 @@ MPG = SimpleLinearRegression.predict(HP)
 print('Predicted MPG for 240 HP:', MPG)
 ```
 Insights:
-The prediction for a vehicle with 240 HP is approximately 21.33 MPG, demonstrating the practical application of the model.
+The prediction for a vehicle with 240 HP is approximately 21.4 MPG, demonstrating the practical application of the model.
 
 ## What I Learned
 The relationship between vehicle horsepower and fuel economy is quantifiable.
