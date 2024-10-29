@@ -74,7 +74,6 @@ df.info()
 # Visualize data 
 sns.set_theme(style='darkgrid')
 sns.jointplot(x='Horse Power', y='Fuel Economy (MPG)', data=df, kind='reg', truncate=False)
-plt.ylabel('MPG')
 plt.show()
 ```
 ```python
