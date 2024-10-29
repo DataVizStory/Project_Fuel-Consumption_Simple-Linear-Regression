@@ -76,6 +76,8 @@ sns.set_theme(style='darkgrid')
 sns.jointplot(x='Horse Power', y='Fuel Economy (MPG)', data=df, kind='reg', truncate=False)
 plt.show()
 ```
+![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/Chart1.png)
+
 ```python
 sns.set_theme(style="ticks")
 sns.pairplot(df, kind='reg')
