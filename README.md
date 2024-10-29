@@ -83,6 +83,7 @@ sns.set_theme(style="ticks")
 sns.pairplot(df, kind='reg')
 plt.show()
 ```
+![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/Chart2.png)
 ```python
 sns.set_theme(style="ticks")
 sns.lmplot(x='Horse Power', y='Fuel Economy (MPG)', data=df)
@@ -90,6 +91,7 @@ plt.ylabel('MPG')
 plt.grid()
 plt.show()
 ```
+![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/Chart3.png)
 Insights:
 Preliminary analysis indicates a negative correlation between horsepower and fuel economy, suggesting that higher horsepower generally leads to lower MPG.
 
@@ -152,6 +154,7 @@ plt.xlabel('Horse Power (HP)')
 plt.title('HP vs. MPG (Training dataset)')
 plt.show()
 ```
+![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Training%20dataset).png)
 ```python
 accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
 print('Model Accuracy:', accuracy_LinearRegression)
@@ -168,6 +171,7 @@ plt.xlabel('Horse Power (HP)')
 plt.title('HP vs. MPG (Testing dataset)')
 plt.show()
 ```
+![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
 ```python
 # Use the trained Model to generate the predictions
 HP = np.array([240]).reshape(-1, 1)
