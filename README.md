@@ -168,8 +168,17 @@ plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
 ```python
+# First way to calculate the coefficient of determination (R²)
+# A built-in method of the model that returns the coefficient of determination (R²) based on the test data
 accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
 print('Model Accuracy:', accuracy_LinearRegression)
+```
+```python
+# Second way to calculate the coefficient of determination (R²)
+# Manually calculates R²  by comparing the true values and predicted values
+from sklearn.metrics import r2_score
+r2=r2_score(y_test,y_predict)
+print('Model Accuracy:', r2)
 ```
 Insights:
 The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
