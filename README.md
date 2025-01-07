@@ -156,12 +156,6 @@ plt.title('HP vs. MPG (Training dataset)')
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Training%20dataset).png)
-```python
-accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
-print('Model Accuracy:', accuracy_LinearRegression)
-```
-Insights:
-The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
 
 ```python
 # Visualize Test Set Results
@@ -173,6 +167,13 @@ plt.title('HP vs. MPG (Testing dataset)')
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
+```python
+accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
+print('Model Accuracy:', accuracy_LinearRegression)
+```
+Insights:
+The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
+
 ```python
 # Use the trained Model to generate the predictions
 HP = np.array([240]).reshape(-1, 1)
