@@ -204,8 +204,8 @@ print("Residual sum of squares (MSE): %.2f" % mse)
 rmse = np.sqrt(mse)
 print("Root Mean Squared Error (RMSE): %.2f" % rmse) 
 ```
-Insights:
-Insights: RMSE represents the model's average prediction error in terms of MPG. A lower RMSE indicates a more accurate model. By calculating RMSE, we can better understand the magnitude of typical prediction errors in the context of MPG.
+Insights: Given that RMSE (1.22) is relatively small compared to the overall range of MPG values (which typically range from 10 to 50 MPG in this dataset), it indicates that the model is reasonably accurate.
+The model does not make large errors in its predictions, and an average error of 1.22 MPG suggests that the model is performing well.
 
 ### 6) Generate the predictions
 ```python
