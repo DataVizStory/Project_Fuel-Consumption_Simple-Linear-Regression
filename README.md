@@ -158,13 +158,6 @@ plt.show()
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Training%20dataset).png)
 
 ```python
-accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
-print('Model Accuracy:', accuracy_LinearRegression)
-```
-Insights:
-The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
-
-```python
 # Visualize Test Set Results
 plt.scatter(X_test, y_test, color='gray')
 plt.plot(X_test, SimpleLinearRegression.predict(X_test), color='red')
@@ -174,6 +167,47 @@ plt.title('HP vs. MPG (Testing dataset)')
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
+
+### 5) Model Evaluation and Accuracy Metrics
+1) ##### R²-Score:
+1R²-Score: The R²-Score, also known as the coefficient of determination, tells us how well our model fits the data. It gives us the proportion of the variance in the dependent variable (MPG) that can be predicted from the independent variable (horsepower). A higher R² indicates a better model fit.
+```python
+# First way to calculate the coefficient of determination (R²)
+# A built-in method of the model that returns the coefficient of determination (R²) based on the test data
+accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
+print('Model Accuracy:', accuracy_LinearRegression)
+```
+```python
+# Second way to calculate the coefficient of determination (R²)
+# Manually calculates R²  by comparing the true values and predicted values
+from sklearn.metrics import r2_score
+r2=r2_score(y_test,y_predict)
+print('Model Accuracy:', r2)
+```
+Insights:
+The model achieved an R² of approximately 93%, indicating that 93% of the variance in Fuel Economy (MPG) can be explained by Horse Power (HP). This suggests the model is quite effective in predicting MPG based on HP.
+
+2) ##### Mean Absolute Error (MAE)
+Mean Absolute Error (MAE): The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. It is a common metric used to evaluate the accuracy of regression models, where smaller values indicate better performance.
+```python
+#This metric quantifies the average magnitude of errors. Lower MAE suggests a better model.
+mae = np.mean(np.absolute(y_predict - y_test))
+print("Mean absolute error: %.2f" % mae)
+```
+Insights: The MAE for this model is 0.98. This suggests that, on average, the model's prediction is off by 0.98 MPG. This is a relatively small error, meaning the model's predictions are fairly accurate and close to the true values.
+
+3) ##### Root Mean Squared Error (MSE)
+Root Mean Squared Error (RMSE): Root Mean Squared Error (RMSE) is another commonly used metric that can be derived by taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
+```python
+mse = np.mean((y_predict - y_test) ** 2)
+print("Residual sum of squares (MSE): %.2f" % mse)
+rmse = np.sqrt(mse)
+print("Root Mean Squared Error (RMSE): %.2f" % rmse) 
+```
+Insights: Given that RMSE (1.22) is relatively small compared to the overall range of MPG values (which typically range from 10 to 50 MPG in this dataset), it indicates that the model is reasonably accurate.
+The model does not make large errors in its predictions, and an average error of 1.22 MPG suggests that the model is performing well.
+
+### 6) Generate the predictions
 ```python
 # Use the trained Model to generate the predictions
 HP = np.array([240]).reshape(-1, 1)
@@ -184,17 +218,18 @@ Insights:
 The prediction for a vehicle with 240 HP is approximately 21.4 MPG, demonstrating the practical application of the model.
 
 ## What I Learned
-The relationship between vehicle horsepower and fuel economy is quantifiable.
-Simple linear regression can effectively model this relationship and provide useful predictions.
+The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 92% accuracy, 0.98 mean absolute error, and a MSE of 1.48, which suggests good model fit and reliability.
 
 ## Overall Insights
-Higher horsepower generally correlates with lower fuel economy, which is significant for automotive design.
-The model's high accuracy indicates that horsepower is a crucial factor in predicting MPG.
+1. The relationship between horsepower and fuel economy is inversely proportional: as horsepower increases, fuel economy decreases. This is reflected in the negative correlation observed during exploratory data analysis.
+2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 92%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
+3. The MSE of 1.48 and RMSE value (if calculated) indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
 
 ## Challenges I Faced
 Ensuring the dataset was clean and free of anomalies.
 Balancing model complexity and interpretability while achieving good predictive performance.
 
 ## Conclusion
-This project successfully demonstrates the ability to predict fuel economy using vehicle horsepower as a predictor variable. The insights gained can assist automotive manufacturers in making data-driven decisions to enhance vehicle efficiency.
+This project successfully demonstrated the ability to predict fuel economy using a simple linear regression model, with vehicle horsepower as the predictor. The insights gained from the model can aid automotive manufacturers in making data-driven decisions to improve vehicle performance and fuel efficiency. The model's good accuracy, paired with relatively low error metrics, shows that the relationship between horsepower and fuel economy is both strong and predictable, making it valuable for practical applications in the automotive industry.
+With this model, we have established a reliable method to estimate fuel economy based on a vehicle's horsepower, which is crucial for manufacturers aiming to optimize both performance and environmental impact.
 
