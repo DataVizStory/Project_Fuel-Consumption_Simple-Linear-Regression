@@ -156,6 +156,7 @@ plt.title('HP vs. MPG (Training dataset)')
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Training%20dataset).png)
+
 ```python
 accuracy_LinearRegression = SimpleLinearRegression.score(X_test, y_test)
 print('Model Accuracy:', accuracy_LinearRegression)
