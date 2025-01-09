@@ -196,7 +196,7 @@ print("Mean absolute error: %.2f" % mae)
 ```
 Insights: The MAE for this model is 0.98. This suggests that, on average, the model's prediction is off by 0.98 MPG. This is a relatively small error, meaning the model's predictions are fairly accurate and close to the true values.
 
-3) ##### Root Mean Squared Error (MSE)
+3) ##### Root Mean Squared Error (RMSE)
 Root Mean Squared Error (RMSE): Root Mean Squared Error (RMSE) is another commonly used metric that can be derived by taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
 ```python
 mse = np.mean((y_predict - y_test) ** 2)
