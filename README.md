@@ -167,6 +167,9 @@ plt.title('HP vs. MPG (Testing dataset)')
 plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
+
+### 5) Model Evaluation and Accuracy Metrics
+1) ##### R²-Score:
 ```python
 # First way to calculate the coefficient of determination (R²)
 # A built-in method of the model that returns the coefficient of determination (R²) based on the test data
@@ -183,6 +186,25 @@ print('Model Accuracy:', r2)
 Insights:
 The model achieved an accuracy of approximately 92%, suggesting it is effective in predicting fuel economy based on horsepower.
 
+2) ##### Mean Absolute Error (MAE)
+```python
+#This metric quantifies the average magnitude of errors. Lower MAE suggests a better model.
+mae = np.mean(np.absolute(y_predict - y_test))
+print("Mean absolute error: %.2f" % mae)
+```
+Insights: 
+Mean absolute error: 0.98 This is a relatively small error, suggesting that this model is making fairly accurate predictions on average.
+
+3) ##### Mean Squared Error (MSE)
+```python
+# MSE penalizes larger errors more, making it sensitive to big discrepancies between predicted and actual values. The lower the MSE, the better the model's predictions, as smaller squared errors indicate a better fit of the model to the data.
+mse = np.mean((y_predict - y_test) ** 2)
+print("Residual sum of squares (MSE): %.2f" % mse)
+```
+Insights:
+Residual sum of squares (MSE): 1.48
+
+### 6) Generate the predictions
 ```python
 # Use the trained Model to generate the predictions
 HP = np.array([240]).reshape(-1, 1)
