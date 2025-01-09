@@ -229,7 +229,7 @@ The project has demonstrated the utility of simple linear regression in predicti
 Ensuring the dataset was clean and free of anomalies.
 Balancing model complexity and interpretability while achieving good predictive performance.
 
-## Conclusion
+## Conclusions
 This project successfully demonstrated the ability to predict fuel economy using a simple linear regression model, with vehicle horsepower as the predictor. The insights gained from the model can aid automotive manufacturers in making data-driven decisions to improve vehicle performance and fuel efficiency. The model's good accuracy, paired with relatively low error metrics, shows that the relationship between horsepower and fuel economy is both strong and predictable, making it valuable for practical applications in the automotive industry.
 With this model, we have established a reliable method to estimate fuel economy based on a vehicle's horsepower, which is crucial for manufacturers aiming to optimize both performance and environmental impact.
 
