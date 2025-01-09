@@ -218,18 +218,18 @@ Insights:
 The prediction for a vehicle with 240 HP is approximately 21.4 MPG, demonstrating the practical application of the model.
 
 ## What I Learned
-The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 92% accuracy, 0.98 mean absolute error, and a MSE of 1.48, which suggests good model fit and reliability.
+The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 93% accuracy, 0.98 mean absolute error, and a MSE of 1.48, which suggests good model fit and reliability.
 
 ## Overall Insights
 1. The relationship between horsepower and fuel economy is inversely proportional: as horsepower increases, fuel economy decreases. This is reflected in the negative correlation observed during exploratory data analysis.
-2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 92%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
+2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 93%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
 3. The MSE of 1.48 and RMSE value (if calculated) indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
 
 ## Challenges I Faced
 Ensuring the dataset was clean and free of anomalies.
 Balancing model complexity and interpretability while achieving good predictive performance.
 
-## Conclusion
+## Conclusions
 This project successfully demonstrated the ability to predict fuel economy using a simple linear regression model, with vehicle horsepower as the predictor. The insights gained from the model can aid automotive manufacturers in making data-driven decisions to improve vehicle performance and fuel efficiency. The model's good accuracy, paired with relatively low error metrics, shows that the relationship between horsepower and fuel economy is both strong and predictable, making it valuable for practical applications in the automotive industry.
 With this model, we have established a reliable method to estimate fuel economy based on a vehicle's horsepower, which is crucial for manufacturers aiming to optimize both performance and environmental impact.
 
