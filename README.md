@@ -182,27 +182,41 @@ r2=r2_score(y_test,y_predict)
 print('Model Accuracy:', r2)
 ```
 Insights:
-The model achieved an R² of approximately 93%, indicating that 93% of the variance in Fuel Economy (MPG) can be explained by Horse Power (HP). This suggests the model is quite effective in predicting MPG based on HP.
+The model achieved an R² of approximately 90%, indicating that 93% of the variance in Fuel Economy (MPG) can be explained by Horse Power (HP). This suggests the model is quite effective in predicting MPG based on HP.
 
 2) ##### Mean Absolute Error (MAE)
 Mean Absolute Error (MAE): The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. It is a common metric used to evaluate the accuracy of regression models, where smaller values indicate better performance.
 ```python
 #This metric quantifies the average magnitude of errors. Lower MAE suggests a better model.
+# First way to calculate MAE
 mae = np.mean(np.absolute(y_predict - y_test))
 print("Mean absolute error: %.2f" % mae)
 ```
-Insights: The MAE for this model is 0.98. This suggests that, on average, the model's prediction is off by 0.98 MPG. This is a relatively small error, meaning the model's predictions are fairly accurate and close to the true values.
+```python
+# Second way to calculate the MAE
+from sklearn.metrics  import mean_absolute_error
+mae2=mean_absolute_error(y_test,y_predict)
+print("Mean absolute error: %.2f" % mae2)
+```
+Insights: The MAE for this model is 1.22. This suggests that, on average, the model's prediction is off by 1.22 MPG. This is a relatively small error, meaning the model's predictions are fairly accurate and close to the true values.
 
 3) ##### Root Mean Squared Error (RMSE)
 Root Mean Squared Error (RMSE): Root Mean Squared Error (RMSE) is another commonly used metric that can be derived by taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
 ```python
+# First way to calculate the RMSE
 mse = np.mean((y_predict - y_test) ** 2)
 print("Residual sum of squares (MSE): %.2f" % mse)
 rmse = np.sqrt(mse)
 print("Root Mean Squared Error (RMSE): %.2f" % rmse) 
 ```
-Insights: Given that RMSE (1.22) is relatively small compared to the overall range of MPG values (which typically range from 10 to 50 MPG in this dataset), it indicates that the model is reasonably accurate.
-The model does not make large errors in its predictions, and an average error of 1.22 MPG suggests that the model is performing well.
+```python
+# Second way to calculate the the RMSE 
+from sklearn.metrics  import mean_squared_error
+rmse2= mean_squared_error(y_test,y_predict)
+print("Root Mean Squared Error (RMSE): %.2f" % rmse2) 
+```
+
+Insights: Given that RMSE (1.41) is relatively small compared to the overall range of MPG values (which typically range from 10 to 50 MPG in this dataset), it indicates that the model is reasonably accurate.
 
 ### 6) Generate the predictions
 ```python
@@ -212,15 +226,15 @@ MPG = SimpleLinearRegression.predict(HP)
 print('Predicted MPG for 240 HP:', MPG)
 ```
 Insights:
-The prediction for a vehicle with 240 HP is approximately 21.4 MPG, demonstrating the practical application of the model.
+The prediction for a vehicle with 240 HP is approximately 21.1 MPG, demonstrating the practical application of the model.
 
 ## What I Learned
-The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 93% accuracy, 0.98 mean absolute error, and a MSE of 1.48, which suggests good model fit and reliability.
+The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 93% accuracy, 1.22 mean absolute error, and a RMSE of 1.41, which suggests good model fit and reliability.
 
 ## Overall Insights
 1. The relationship between horsepower and fuel economy is inversely proportional: as horsepower increases, fuel economy decreases. This is reflected in the negative correlation observed during exploratory data analysis.
-2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 93%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
-3. The MSE of 1.48 and RMSE value 1.22 indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
+2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 90%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
+3. The RMSE of 1.99 and RMSE value 1.41 indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
 
 ## Challenges I Faced
 Ensuring the dataset was clean and free of anomalies.
