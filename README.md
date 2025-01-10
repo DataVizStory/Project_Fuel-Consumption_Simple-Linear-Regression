@@ -235,9 +235,9 @@ Insights: For a vehicle with **240 HP**, the model predicts a fuel economy of **
 The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 90% accuracy, 1.22 mean absolute error, and a RMSE of 1.41, which suggests good model fit and reliability.
 
 ## Overall Insights
-1. The relationship between horsepower and fuel economy is inversely proportional: as horsepower increases, fuel economy decreases. This is reflected in the negative correlation observed during exploratory data analysis.
-2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 90%, it shows strong predictive power, and the mean absolute error of 1.22 suggests that the predictions are, on average, close to the actual values.
-3. The RMSE of 1.99 and RMSE value 1.41 indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
++ The relationship between horsepower (HP) and fuel economy (MPG) is inversely proportional: as horsepower increases, fuel economy tends to decrease. This negative correlation was confirmed during exploratory data analysis.
++ The linear regression model demonstrates strong predictive power with an R² score of 90%, meaning it can explain 90% of the variance in fuel economy based on horsepower. Additionally, the mean absolute error (MAE) of 1.22 indicates that, on average, the model's predictions are off by just over 1 MPG, suggesting a fairly accurate fit.
++ The model’s Root Mean Squared Error (RMSE) of 1.41 further supports its performance, with the relatively low RMSE value indicating that the model’s predictions are close to the actual MPG values. This makes the model a useful tool for decision-making in automotive design, particularly for predicting fuel efficiency based on horsepower.
 
 ## Challenges I Faced
 Ensuring the dataset was clean and free of anomalies.
