@@ -28,7 +28,7 @@ This project aims to develop a predictive model that analyzes the relationship b
 
 ### Key Steps
 1) **Exploratory Data Analysis**
-2) **Create testing and train dataset** 
+2) **Create testing and training dataset** 
 3) **Model Development**
 4) **Test Model**
 5) **Model Evaluation and Accuracy Metrics**
