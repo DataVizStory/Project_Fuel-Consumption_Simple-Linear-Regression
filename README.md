@@ -79,7 +79,6 @@ Data columns (total 2 columns):
 dtypes: float64(2)
 memory usage: 1.7 KB
 
-
 Insights:
 The dataset consists of 100 entries and includes two critical variables: Horse Power and Fuel Economy (MPG), which are essential for our analysis.
 
