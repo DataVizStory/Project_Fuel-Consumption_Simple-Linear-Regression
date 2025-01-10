@@ -27,11 +27,11 @@ This project aims to develop a predictive model that analyzes the relationship b
 
 
 ### Key Steps
-1) **Exploratory Data Analysis**
-2) **Create testing and training dataset** 
-3) **Model Development**
-4) **Test Model**
-5) **Model Evaluation and Accuracy Metrics**
+[1) **Exploratory Data Analysis**](#1)
+[2) **Create testing and training dataset** ](#2)
+[3) **Model Development**](#3)
+[4) **Test Model**](#4)
+[5) **Model Evaluation and Accuracy Metrics**](#5)
 
 ### Dataset
 The dataset used for this analysis is the **FuelEconomy.csv**, which includes the following variables:
@@ -40,7 +40,7 @@ The dataset used for this analysis is the **FuelEconomy.csv**, which includes th
 
 ## Ananysis
 
-### 1) Exploratory Data Analysis
+### 1) Exploratory Data Analysis <a name='1'></a>
 a) Data Loading
 Import the "FuelEconomy.csv" dataset into the analysis environment.
 
@@ -110,7 +110,7 @@ plt.show()
 Insights:
 Preliminary analysis indicates a negative correlation between horsepower and fuel economy, suggesting that higher horsepower generally leads to lower MPG.
 
-### 2) Create Testing and Training Dataset
+### 2) Create Testing and Training Dataset <a name='2'></a>
 Split the dataset into training (75%) and testing (25%) subsets to facilitate model training and evaluation.
 
 ```python
@@ -129,7 +129,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 Insights:
 The data split ensures that we have a robust training and testing setup, allowing us to assess the model's performance accurately.
 
-### 3) Model Development
+### 3) Model Development <a name='3'></a>
 Utilize Scikit-Learn to implement a simple linear regression model that predicts fuel economy based on horsepower.
 
 ```python
@@ -149,7 +149,7 @@ Insights:
 The coefficients from the linear regression model quantify the relationship between horsepower and fuel economy, indicating how much MPG decreases per unit increase in horsepower.
 
 
-### 4) Test Model
+### 4) Test Model <a name='4'></a>
 Assess the performance of the trained model using relevant metrics to ensure its accuracy and reliability.
 
 ```python
@@ -182,7 +182,7 @@ plt.show()
 ```
 ![](https://github.com/DataVizStory/Project_Fuel-Consumption_Simple-Linear-Regression/blob/main/Images/HP%20vs.%20MPG%20(Testing%20dataset).png)
 
-### 5) Model Evaluation and Accuracy Metrics
+### 5) Model Evaluation and Accuracy Metrics <a name='5'></a>
 1) ##### R²-Score:
 1R²-Score: The R²-Score, also known as the coefficient of determination, tells us how well our model fits the data. It gives us the proportion of the variance in the dependent variable (MPG) that can be predicted from the independent variable (horsepower). A higher R² indicates a better model fit.
 ```python
