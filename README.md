@@ -31,6 +31,7 @@ This project aims to develop a predictive model that analyzes the relationship b
 2) **Create testing and train dataset** 
 3) **Model Development**
 4) **Test Model**
+5) **Model Evaluation and Accuracy Metrics**
 
 ### Dataset
 The dataset used for this analysis is the **FuelEconomy.csv**, which includes the following variables:
