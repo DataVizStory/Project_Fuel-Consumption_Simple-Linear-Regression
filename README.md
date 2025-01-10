@@ -27,11 +27,11 @@ This project aims to develop a predictive model that analyzes the relationship b
 
 
 ### Key Steps
-[1) **Exploratory Data Analysis**](#1)
-[2) **Create testing and training dataset** ](#2)
-[3) **Model Development**](#3)
-[4) **Test Model**](#4)
-[5) **Model Evaluation and Accuracy Metrics**](#5)
+1) [**Exploratory Data Analysis**](#1)
+2) [**Create testing and training dataset** ](#2)
+3) [**Model Development**](#3)
+4) [**Test Model**](#4)
+5) [**Model Evaluation and Accuracy Metrics**](#5)
 
 ### Dataset
 The dataset used for this analysis is the **FuelEconomy.csv**, which includes the following variables:
