@@ -68,22 +68,6 @@ Insights:
 The dataset consists of 100 entries and includes two critical variables: Horse Power and Fuel Economy (MPG), which are essential for our analysis.
 
 b) Conduct data visualization and preliminary analysis to identify trends, patterns, and anomalies within the dataset.
-
-```python
-df.describe()
-```
-```python
-df.info()
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 100 entries, 0 to 99
-Data columns (total 2 columns):
- #   Column              Non-Null Count  Dtype  
----  ------              --------------  -----  
- 0   Horse Power         100 non-null    float64
- 1   Fuel Economy (MPG)  100 non-null    float64
-dtypes: float64(2)
-memory usage: 1.7 KB
-```
 ```python
 # Visualize data 
 sns.set_theme(style='darkgrid')
