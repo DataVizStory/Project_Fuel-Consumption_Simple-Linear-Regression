@@ -44,9 +44,6 @@ a) Data Loading
 Import the "FuelEconomy.csv" dataset into the analysis environment.
 
 ```python
-#!pip install --upgrade seaborn
-#!pip install --upgrade pandas
-
 #import libraries 
 import pandas as pd
 import numpy as np
