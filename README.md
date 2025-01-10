@@ -217,8 +217,9 @@ rmse2= mean_squared_error(y_test,y_predict)
 print("Root Mean Squared Error (RMSE): %.2f" % rmse2) 
 ```
 
-Insights: **The Mean Squared Error (MSE)** is **1.48**, which measures the average of the squared differences between the predicted and actual values. Since MSE penalizes larger errors more heavily, this value indicates that the model has made some larger prediction errors, but the overall error is still relatively small. The MSE value, when compared to the range of MPG values, suggests a decent fit and implies that the model can predict fuel economy with reasonable accuracy.
-**The Root Mean Squared Error (RMSE)** is calculated as **1.41 MPG**, which represents the square root of the MSE and brings the error back to the same units as the target variable (MPG). RMSE provides an intuitive measure of the typical prediction error, and since it is relatively small compared to the range of MPG values in this dataset, it indicates that the model is performing reasonably well. A lower RMSE value signifies that the model's predictions are closer to the actual MPG values, which is desirable for practical applications.
+Insights: **The Mean Squared Error (MSE)** for the model is **1.48**, which measures the average of the squared differences between the predicted and actual MPG values. Since MSE penalizes larger errors more heavily, this value indicates that while there may be some larger prediction errors, the overall error is relatively small. When compared to the range of MPG values (typically between 10 and 50 MPG), the MSE suggests that the model is a reasonable fit.
+
+**The Root Mean Squared Error (RMSE)**, which is the square root of MSE, is **1.41 MPG**. RMSE is helpful because it brings the error back to the original units of the target variable (MPG), making it easier to interpret. Since the RMSE is relatively small compared to the range of MPG values in the dataset, it indicates that the model performs well and its predictions are close to the actual values. A lower RMSE value signifies more accurate predictions, making the model suitable for practical applications like estimating fuel economy.
 
 ### 6) Generate the predictions
 ```python
