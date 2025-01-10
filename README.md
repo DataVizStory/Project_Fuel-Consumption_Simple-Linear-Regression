@@ -183,7 +183,7 @@ r2=r2_score(y_test,y_predict)
 print('Model Accuracy:', r2)
 ```
 Insights:
-The model achieved an R² of approximately 90%, indicating that 93% of the variance in Fuel Economy (MPG) can be explained by Horse Power (HP). This suggests the model is quite effective in predicting MPG based on HP.
+**The R² score** of approximately **90%** indicates that 90% of the variance in fuel economy (MPG) can be explained by vehicle horsepower (HP). This suggests that the model effectively captures the relationship between horsepower and fuel efficiency, and the model's predictions are strongly aligned with the observed data. A high R² value is generally considered a good fit, confirming that horsepower is a significant predictor of fuel economy in this dataset.
 
 2) ##### Mean Absolute Error (MAE)
 Mean Absolute Error (MAE): The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. It is a common metric used to evaluate the accuracy of regression models, where smaller values indicate better performance.
@@ -199,10 +199,10 @@ from sklearn.metrics  import mean_absolute_error
 mae2=mean_absolute_error(y_test,y_predict)
 print("Mean absolute error: %.2f" % mae2)
 ```
-Insights: The MAE for this model is 1.22. This suggests that, on average, the model's prediction is off by 1.22 MPG. This is a relatively small error, meaning the model's predictions are fairly accurate and close to the true values.
+Insights: **The Mean Absolute Error (MAE)** is calculated as **1.22 MPG**, which represents the average absolute difference between the predicted and actual fuel economy values. This indicates that, on average, the model's predictions are off by approximately 1.22 MPG. Given the typical range of fuel economy values (10–50 MPG), this is a relatively small error, suggesting that the model is performing well and making accurate predictions.
 
 3) ##### Root Mean Squared Error (RMSE)
-Root Mean Squared Error (RMSE): Root Mean Squared Error (RMSE) is another commonly used metric that can be derived by taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
+Root Mean Squared Error (RMSE): taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
 ```python
 # First way to calculate the RMSE
 mse = np.mean((y_predict - y_test) ** 2)
@@ -217,7 +217,8 @@ rmse2= mean_squared_error(y_test,y_predict)
 print("Root Mean Squared Error (RMSE): %.2f" % rmse2) 
 ```
 
-Insights: Given that RMSE (1.41) is relatively small compared to the overall range of MPG values (which typically range from 10 to 50 MPG in this dataset), it indicates that the model is reasonably accurate.
+Insights: **The Mean Squared Error (MSE)** is **1.48**, which measures the average of the squared differences between the predicted and actual values. Since MSE penalizes larger errors more heavily, this value indicates that the model has made some larger prediction errors, but the overall error is still relatively small. The MSE value, when compared to the range of MPG values, suggests a decent fit and implies that the model can predict fuel economy with reasonable accuracy.
+**The Root Mean Squared Error (RMSE)** is calculated as **1.41 MPG**, which represents the square root of the MSE and brings the error back to the same units as the target variable (MPG). RMSE provides an intuitive measure of the typical prediction error, and since it is relatively small compared to the range of MPG values in this dataset, it indicates that the model is performing reasonably well. A lower RMSE value signifies that the model's predictions are closer to the actual MPG values, which is desirable for practical applications.
 
 ### 6) Generate the predictions
 ```python
@@ -226,8 +227,8 @@ HP = np.array([240]).reshape(-1, 1)
 MPG = SimpleLinearRegression.predict(HP)
 print('Predicted MPG for 240 HP:', MPG)
 ```
-Insights:
-The prediction for a vehicle with 240 HP is approximately 21.1 MPG, demonstrating the practical application of the model.
+Insights:For a vehicle with **240 HP**, the model predicts a fuel economy of **21.1 MPG**. This prediction demonstrates the model's ability to make reasonable estimations based on horsepower alone, aligning well with expectations for vehicles of this horsepower range. The model's predictions appear to be reliable within the dataset's context, providing a useful tool for estimating fuel economy in the automotive industry.
+
 
 ## What I Learned
 The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 90% accuracy, 1.22 mean absolute error, and a RMSE of 1.41, which suggests good model fit and reliability.
