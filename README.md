@@ -183,7 +183,7 @@ r2=r2_score(y_test,y_predict)
 print('Model Accuracy:', r2)
 ```
 Insights:
-**The R² score** of approximately **90%** indicates that 90% of the variance in fuel economy (MPG) can be explained by vehicle horsepower (HP). This suggests that the model effectively captures the relationship between horsepower and fuel efficiency, and the model's predictions are strongly aligned with the observed data. A high R² value is generally considered a good fit, confirming that horsepower is a significant predictor of fuel economy in this dataset.
+**The R² score** of approximately **90%** means that 90% of the variance in fuel economy (MPG) can be explained by vehicle horsepower (HP). This suggests that the model effectively captures the relationship between horsepower and fuel efficiency, and the model's predictions are strongly aligned with the observed data. A high R² value is generally considered a good fit, confirming that horsepower is a significant predictor of fuel economy in this dataset.
 
 2) ##### Mean Absolute Error (MAE)
 Mean Absolute Error (MAE): The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. It is a common metric used to evaluate the accuracy of regression models, where smaller values indicate better performance.
@@ -236,7 +236,7 @@ The project has demonstrated the utility of simple linear regression in predicti
 
 ## Overall Insights
 + The relationship between horsepower (HP) and fuel economy (MPG) is inversely proportional: as horsepower increases, fuel economy tends to decrease. This negative correlation was confirmed during exploratory data analysis.
-+ The linear regression model demonstrates strong predictive power with an R² score of 90%, meaning it can explain 90% of the variance in fuel economy based on horsepower. Additionally, the mean absolute error (MAE) of 1.22 indicates that, on average, the model's predictions are off by just over 1 MPG, suggesting a fairly accurate fit.
++ The linear regression model demonstrates strong predictive power with an R² score of 90%, meaning it can explain 90% of the variance in fuel economy based on horsepower. Additionally, the mean absolute error (MAE) of 1.22 indicates that, on average, the model's predictions are off by just over 1 MPG, suggesting a relatively accurate accurate fit.
 + The model’s Root Mean Squared Error (RMSE) of 1.41 further supports its performance, with the relatively low RMSE value indicating that the model’s predictions are close to the actual MPG values. This makes the model a useful tool for decision-making in automotive design, particularly for predicting fuel efficiency based on horsepower.
 
 ## Challenges I Faced
