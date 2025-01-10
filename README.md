@@ -236,7 +236,7 @@ The project has demonstrated the utility of simple linear regression in predicti
 
 ## Overall Insights
 1. The relationship between horsepower and fuel economy is inversely proportional: as horsepower increases, fuel economy decreases. This is reflected in the negative correlation observed during exploratory data analysis.
-2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 90%, it shows strong predictive power, and the mean absolute error of 0.98 suggests that the predictions are, on average, close to the actual values.
+2. The model is fairly accurate in predicting MPG based on HP. With an R² score of 90%, it shows strong predictive power, and the mean absolute error of 1.99 suggests that the predictions are, on average, close to the actual values.
 3. The RMSE of 1.99 and RMSE value 1.41 indicate that the model performs reasonably well and can be useful for decision-making in automotive design, specifically in predicting fuel efficiency.
 
 ## Challenges I Faced
