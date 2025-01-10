@@ -55,8 +55,6 @@ import seaborn as sns
 # Load dataset 
 df = pd.read_csv(r"C:\Users\ymiza\Documents\my page\Python\Python_Data_Project\Simple_Linear_Regression_Project\FuelEconomy.csv")
 df.head()
-markdown_table = df.to_markdown(index=False)
-print(markdown_table)
 ```
 Insights:
 The dataset consists of 100 entries and includes two critical variables: Horse Power and Fuel Economy (MPG), which are essential for our analysis.
