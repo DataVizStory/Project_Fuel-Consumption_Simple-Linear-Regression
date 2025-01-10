@@ -32,6 +32,8 @@ This project aims to develop a predictive model that analyzes the relationship b
 3) [**Model Development**](#3)
 4) [**Test Model**](#4)
 5) [**Model Evaluation and Accuracy Metrics**](#5)
+6) [**Generate the predictions**](#6)
+7) [**Conclusions**](#7)
 
 ### Dataset
 The dataset used for this analysis is the **FuelEconomy.csv**, which includes the following variables:
@@ -237,7 +239,7 @@ Insights: **The Mean Squared Error (MSE)** for the model is **1.48**, which meas
 
 **The Root Mean Squared Error (RMSE)**, which is the square root of MSE, is **1.41 MPG**.  RMSE is helpful because it brings the error back to the original units of the target variable (MPG), making it easier to interpret. Since the RMSE is relatively small compared to the range of MPG values in the dataset, it indicates that the model performs well and its predictions are close to the actual values. A lower RMSE value signifies more accurate predictions, making the model suitable for practical applications like estimating fuel economy.
 
-### 6) Generate the predictions
+### 6) Generate the predictions <a name='6'></a>
 ```python
 # Use the trained Model to generate the predictions
 HP = np.array([240]).reshape(-1, 1)
@@ -246,14 +248,15 @@ print('Predicted MPG for 240 HP:', MPG)
 ```
 Insights: For a vehicle with **240 HP**, the model predicts a fuel economy of **21.1 MPG**. This prediction demonstrates the model's ability to make reasonable estimations based on horsepower alone, aligning well with expectations for vehicles of this horsepower range. The model's predictions appear to be reliable within the dataset's context, providing a useful tool for estimating fuel economy in the automotive industry.
 
-
-## What I Learned
-The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 90% accuracy, 1.22 mean absolute error, and a RMSE of 1.41, which suggests good model fit and reliability.
+### 7) Conclusuons <a name='7'></a>
 
 ## Overall Insights
 + The relationship between horsepower (HP) and fuel economy (MPG) is inversely proportional: as horsepower increases, fuel economy tends to decrease. This negative correlation was confirmed during exploratory data analysis.
 + The linear regression model demonstrates strong predictive power with an R² score of 90%, meaning it can explain 90% of the variance in fuel economy based on horsepower. Additionally, the mean absolute error (MAE) of 1.22 indicates that, on average, the model's predictions are off by just over 1 MPG, suggesting a relatively accurate accurate fit.
 + The model’s Root Mean Squared Error (RMSE) of 1.41 further supports its performance, with the relatively low RMSE value indicating that the model’s predictions are close to the actual MPG values. This makes the model a useful tool for decision-making in automotive design, particularly for predicting fuel efficiency based on horsepower.
+  
+## What I Learned
+The project has demonstrated the utility of simple linear regression in predicting fuel economy (MPG) based on vehicle horsepower (HP). The model is able to produce relatively accurate predictions with a 90% accuracy, 1.22 mean absolute error, and a RMSE of 1.41, which suggests good model fit and reliability.
 
 ## Challenges I Faced
 Ensuring the dataset was clean and free of anomalies. Balancing model complexity and interpretability while achieving good predictive performance.
