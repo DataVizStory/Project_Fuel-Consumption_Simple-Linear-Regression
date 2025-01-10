@@ -227,7 +227,7 @@ HP = np.array([240]).reshape(-1, 1)
 MPG = SimpleLinearRegression.predict(HP)
 print('Predicted MPG for 240 HP:', MPG)
 ```
-Insights:For a vehicle with **240 HP**, the model predicts a fuel economy of **21.1 MPG**. This prediction demonstrates the model's ability to make reasonable estimations based on horsepower alone, aligning well with expectations for vehicles of this horsepower range. The model's predictions appear to be reliable within the dataset's context, providing a useful tool for estimating fuel economy in the automotive industry.
+Insights: For a vehicle with **240 HP**, the model predicts a fuel economy of **21.1 MPG**. This prediction demonstrates the model's ability to make reasonable estimations based on horsepower alone, aligning well with expectations for vehicles of this horsepower range. The model's predictions appear to be reliable within the dataset's context, providing a useful tool for estimating fuel economy in the automotive industry.
 
 
 ## What I Learned
