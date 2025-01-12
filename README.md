@@ -203,7 +203,7 @@ Insights:
 **The R² score** of approximately 90% means that 90% of the variance in fuel economy (MPG) can be explained by vehicle horsepower (HP). This suggests that the model effectively captures the relationship between horsepower and fuel efficiency, and the model's predictions are strongly aligned with the observed data. A high R² value is generally considered a good fit, confirming that horsepower is a significant predictor of fuel economy in this dataset.
 
 2) ##### Mean Absolute Error (MAE)
-Mean Absolute Error (MAE): The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. It is a common metric used to evaluate the accuracy of regression models, where smaller values indicate better performance.
+The Mean Absolute Error (MAE) is the average of the absolute differences between the predicted and actual values. 
 ```python
 #This metric quantifies the average magnitude of errors. Lower MAE suggests a better model.
 # First way to calculate MAE
@@ -219,7 +219,7 @@ print("Mean absolute error: %.2f" % mae2)
 Insights: **The Mean Absolute Error (MAE)** is calculated as **1.22 MPG**, which represents the average absolute difference between the predicted and actual fuel economy values. This indicates that, on average, the model's predictions are off by approximately 1.22 MPG. Given the typical range of fuel economy values (10–50 MPG), this is a relatively small error, suggesting that the model is performing well and making accurate predictions.
 
 3) ##### Root Mean Squared Error (RMSE)
-Root Mean Squared Error (RMSE): taking the square root of MSE. This helps bring the error value back to the original units (MPG) and is often easier to interpret.
+Root Mean Squared Error (RMSE): taking the square root of MSE. 
 ```python
 # First way to calculate the RMSE
 mse = np.mean((y_predict - y_test) ** 2)
